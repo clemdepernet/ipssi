@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-          docker.withRegistry('https://hub.docker.com/r/clemdepernet/nginx', 'docker_id') {
+          docker.withRegistry('registry.hub.docker.com/clemdepernet/nginx', 'docker_id') {
               img.push 'latest'
               img.push()
           }
